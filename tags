@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AnimatedUnit	unit.rb	/^class AnimatedUnit$/;"	c
+Dispatcher	dispatcher.rb	/^class Dispatcher$/;"	c
+Game	main.rb	/^class Game $/;"	c
+GameWindow	gameWindow.rb	/^class GameWindow < Gosu::Window$/;"	c
+UnitHandler	unitHandler.rb	/^class UnitHandler$/;"	c
+button_down	gameWindow.rb	/^    def button_down(id)$/;"	f	class:GameWindow
+calculateMovementAndUpdate	unit.rb	/^  def calculateMovementAndUpdate$/;"	f	class:AnimatedUnit
+draw	dispatcher.rb	/^  def draw$/;"	f	class:Dispatcher
+draw	gameWindow.rb	/^    def draw$/;"	f	class:GameWindow
+drawImage	unit.rb	/^  def drawImage$/;"	f	class:AnimatedUnit
+handleInput	dispatcher.rb	/^  def handleInput(input)$/;"	f	class:Dispatcher
+handleInput	unitHandler.rb	/^  def handleInput$/;"	f	class:UnitHandler
+initialize	dispatcher.rb	/^  def initialize()$/;"	f	class:Dispatcher
+initialize	gameWindow.rb	/^    def initialize(width=800, height=600, fullscreen=false, update_interval=80.0)$/;"	f	class:GameWindow
+initialize	main.rb	/^    def initialize$/;"	f	class:Game
+initialize	unit.rb	/^  def initialize(sourceFile, numberOfFrames, timeInSeconds, cX, cY, speed)$/;"	f	class:AnimatedUnit
+initialize	unitHandler.rb	/^  def initialize()$/;"	f	class:UnitHandler
+needs_redraw?	gameWindow.rb	/^    def needs_redraw?$/;"	f	class:GameWindow
+selectIfInRange	unit.rb	/^  def selectIfInRange(mouseX, mouseY)$/;"	f	class:AnimatedUnit
+setTargetIfSelected	unit.rb	/^  def setTargetIfSelected(mouseX, mouseY)$/;"	f	class:AnimatedUnit
+start	main.rb	/^    def start$/;"	f	class:Game
+stopMovementIfAtTarget	unit.rb	/^  def stopMovementIfAtTarget$/;"	f	class:AnimatedUnit
+update	gameWindow.rb	/^    def update$/;"	f	class:GameWindow
+updateAnimation	dispatcher.rb	/^  def updateAnimation$/;"	f	class:Dispatcher
+updateAnimation	unit.rb	/^  def updateAnimation$/;"	f	class:AnimatedUnit
+updateMousePos	dispatcher.rb	/^  def updateMousePos(mouseX, mouseY)$/;"	f	class:Dispatcher
+updatePosition	unit.rb	/^  def updatePosition(deltaX, deltaY, hypothenuse)$/;"	f	class:AnimatedUnit

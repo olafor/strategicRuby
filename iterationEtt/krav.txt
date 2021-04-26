@@ -1,4 +1,0 @@
-[] En spelpjäs
-[] Spelpjäsen skall gå att markera och avmarkera med vänster musknapp
-[] Klick med högerknapp inom spelytan gör att spelpjäsen rör sig mot det utpekade området
-[] Spelet skall stängas av med ESC

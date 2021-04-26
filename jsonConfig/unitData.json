@@ -1,0 +1,20 @@
+{
+    "coin":
+    {
+    "source": "assets/coin.png",
+    "numberOfFrames": 6,
+    "timeInSeconds": 1,
+    "currentX": 100,
+    "currentY": 100,
+    "speed": 15
+    },
+    "sample":
+    {
+    "source": "assets/sample_sheet.png",
+    "numberOfFrames": 6,
+    "timeInSeconds": 1,
+    "currentX": 300,
+    "currentY": 300,
+    "speed": 30
+    }
+}
