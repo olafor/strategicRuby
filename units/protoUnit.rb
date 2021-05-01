@@ -1,39 +1,33 @@
 require 'gosu'
 
-class AnimatedUnit
+class ProtoUnit
   attr_accessor :currentX, :currentY, :targetX, :targetY, :isMoving, :isSelected
-  attr_accessor :spriteSheet, :displayedImage, :sheetPosition, :sheetPosMax
+  attr_accessor :displayedImage
   attr_accessor :width, :height 
 
-  def initialize(sourceFile, numberOfFrames, timeInSeconds, cX, cY, speed)
+  def initialize(sourceFile, timeInSeconds, cX, cY, speed)
     @name = sourceFile
-    @spriteSheet = Gosu::Image.new(sourceFile)
-    @numberOfFrames = numberOfFrames
-    @width = @spriteSheet.width / @numberOfFrames
-    @height = @spriteSheet.height
+    @displayedImage = Gosu::Image.new(sourceFile)
+    @width = @displayedImage.width
+    @height = @displayedImage.height
     @currentX = cX
     @targetX = @currentX
     @currentY = cY
     @targetY = @currentY
-    @sheetPosition = 0
-    @displayedImage = @spriteSheet.subimage(0, 0, @width, @height)
     @unitSpeed = speed
     @isMoving = false
     @isSelected = false
-    @margin = 1.0
   end
 
   def updateAnimation
-    @sheetPosition += @width
-    @sheetPosition = 0 if @sheetPosition >= @spriteSheet.width - @width
-    @displayedImage = @spriteSheet.subimage(@sheetPosition, 0, @width, @height)
+    return false
   end
 
   def stopMovementIfAtTarget
-    if @currentX < @targetX + @margin &&
-       @currentX > @targetX + @margin &&
-       @currentY < @targetY + @margin &&
-       @currentY > @targetY + @margin
+    if @currentX < @targetX + @width / 2 &&
+       @currentX > @targetX - @width / 2 &&
+       @currentY < @targetY + @height / 2 &&
+       @currentY > @targetY - @height / 2
       @isMoving = false
     end
   end

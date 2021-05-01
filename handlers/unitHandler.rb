@@ -1,6 +1,6 @@
 require 'gosu'
 require 'json'
-require_relative '../units/unit'
+require_relative '../units/animatedUnit'
 
 class UnitHandler
   def initialize()
@@ -8,10 +8,8 @@ class UnitHandler
     @units = []
     @unitData = JSON.parse(file)
     @unitData.each do |key, data|
-      @units.append(
-        AnimatedUnit.new(
+      @units.append(ProtoUnit.new(
         data["source"],
-        data["numberOfFrames"],
         data["timeInSeconds"],
         data["currentX"],
         data["currentY"],

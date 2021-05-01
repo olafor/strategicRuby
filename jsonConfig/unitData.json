@@ -1,17 +1,15 @@
 {
-    "coin":
+    "stickmanA":
     {
-    "source": "assets/coin.png",
-    "numberOfFrames": 6,
+    "source": "assets/stickManA.png",
     "timeInSeconds": 1,
     "currentX": 100,
     "currentY": 100,
     "speed": 15
     },
-    "sample":
+    "stickmanB":
     {
-    "source": "assets/sample_sheet.png",
-    "numberOfFrames": 6,
+    "source": "assets/stickManB.png",
     "timeInSeconds": 1,
     "currentX": 300,
     "currentY": 300,
