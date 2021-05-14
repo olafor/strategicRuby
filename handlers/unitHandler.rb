@@ -1,6 +1,6 @@
 require 'gosu'
 require 'json'
-require_relative '../units/animatedUnit'
+require_relative '../unit/animatedUnit'
 
 class UnitHandler
   def initialize()

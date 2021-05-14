@@ -1,8 +1,7 @@
 require 'gosu'
 
-class AiHandler
+class ProtoIntelligence
   def initialize
-    
 
   end
 
