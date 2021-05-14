@@ -5,16 +5,16 @@ class ProtoUnit
   attr_accessor :displayedImage
   attr_accessor :width, :height 
 
-  def initialize(sourceFile, timeInSeconds, cX, cY, speed)
-    @name = sourceFile
-    @displayedImage = Gosu::Image.new(sourceFile)
+  def initialize(unitData)
+    @type = unitData["type"]
+    @displayedImage = Gosu::Image.new(unitData["source"])
     @width = @displayedImage.width
     @height = @displayedImage.height
-    @currentX = cX
+    @currentX = unitData["currentX"]
     @targetX = @currentX
-    @currentY = cY
+    @currentY = unitData["currentY"]
     @targetY = @currentY
-    @unitSpeed = speed
+    @unitSpeed = unitData["speed"]
     @isMoving = false
     @isSelected = false
   end

@@ -1,6 +1,6 @@
 require 'gosu'
 require_relative 'dispatcher'
-require_relative '.baseline/unitConstants'
+require_relative '.baseline/unitHashes'
 
 class GameWindow < Gosu::Window
     def initialize(width=800, height=600, fullscreen=false, update_interval=80.0)

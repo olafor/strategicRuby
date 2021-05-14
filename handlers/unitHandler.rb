@@ -1,19 +1,18 @@
 require 'gosu'
 require 'json'
 require_relative '../unit/animatedUnit'
+require_relative '../hashConfig/assetHashes.rb'
+require_relative '..hashConfig/unitHashes.rb'
 
 class UnitHandler
   def initialize()
-    file = File.read('jsonConfig/unitData.json')
-    @units = []
-    @unitData = JSON.parse(file)
-    @unitData.each do |key, data|
+    @assets = UNIT_ASSETS
+    @units = UNIT
+
+    unitData = JSON.parse(file)
+    unitData.each do |key, data|
       @units.append(ProtoUnit.new(
-        data["source"],
-        data["timeInSeconds"],
-        data["currentX"],
-        data["currentY"],
-        data["speed"]))
+        unitsData[key]))
     end
   end
 
