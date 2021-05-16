@@ -3,7 +3,6 @@ require_relative './handlers/unitHandler'
 require_relative './handlers/aiHandler'
 require_relative './handlers/menuHandler'
 require_relative './handlers/envHandler'
-require_relative '.baseline/unitHashes'
 
 class Dispatcher
   def initialize()

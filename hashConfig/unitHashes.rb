@@ -1,13 +1,13 @@
-TEST_SCENARIO = {
+BASIC_UNIT = {
   :STICKMAN_A => {
-    :type => 0,
+    :asset => UNIT_ASSETS[:STICKMAN],
     :timeInSeconds => 1,
     :currentX => 100,
     :currentY => 100,
     :speed => 15
     },
   :STICKMAN_B => {
-    :type => 0,
+    :asset => UNIT_ASSETS[:STICKMAN],
     :timeInSeconds => 1,
     :currentX => 300,
     :currentY => 300,

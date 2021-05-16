@@ -6,15 +6,14 @@ class ProtoUnit
   attr_accessor :width, :height 
 
   def initialize(unitData)
-    @type = unitData["type"]
-    @displayedImage = Gosu::Image.new(unitData["source"])
+    @displayedImage = unitData[:asset]
     @width = @displayedImage.width
     @height = @displayedImage.height
-    @currentX = unitData["currentX"]
+    @currentX = unitData[:currentX]
     @targetX = @currentX
-    @currentY = unitData["currentY"]
+    @currentY = unitData[:currentY]
     @targetY = @currentY
-    @unitSpeed = unitData["speed"]
+    @unitSpeed = unitData[:speed]
     @isMoving = false
     @isSelected = false
   end

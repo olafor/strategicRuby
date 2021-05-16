@@ -4,9 +4,9 @@ require_relative 'protoUnit'
 class AnimatedUnit < ProtoUnit
   attr_accessor :spriteSheet, :sheetPosition, :sheetPosMax
 
-  def initialize(sourceFile, timeInSeconds, cX, cY, speed, numberOfFrames)
-    super(sourceFile, timeInSeconds , cX, cY, speed)
-    @numberOfFrames = numberOfFrames
+  def initialize(unitData)
+    super(unitData)
+    @numberOfFrames = unitData[:numberOfFrames]
     @spriteSheet = @displayedImage
     @width = @spriteSheet.width / @numberOfFrames
     @height = @spriteSheet.height

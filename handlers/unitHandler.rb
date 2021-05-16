@@ -1,18 +1,24 @@
 require 'gosu'
-require 'json'
+#require 'json'
 require_relative '../unit/animatedUnit'
 require_relative '../hashConfig/assetHashes.rb'
-require_relative '..hashConfig/unitHashes.rb'
+require_relative '../hashConfig/unitHashes.rb'
+require_relative '../hashConfig/controlHashes.rb'
 
 class UnitHandler
   def initialize()
-    @assets = UNIT_ASSETS
-    @units = UNIT
+    @assets = Hash.new
+    UNIT_ASSETS.each do |key, data|
+      gosuImage = Gosu::Image.new(UNIT_ASSETS[key])
+      @assets[UNIT_ASSETS[key]] = gosuImage
+    end
 
-    unitData = JSON.parse(file)
-    unitData.each do |key, data|
-      @units.append(ProtoUnit.new(
-        unitsData[key]))
+    @units = []
+    BASIC_UNIT.each do |key, data|
+      image = @assets[data[:asset]]
+      unitData = data.clone
+      unitData[:asset] = image
+      @units.append(ProtoUnit.new(unitData))
     end
   end
 
@@ -46,5 +52,4 @@ class UnitHandler
       unit.drawImage
     end
   end
-
 end
