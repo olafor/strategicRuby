@@ -1,0 +1,7 @@
+{
+  "windowWidth": 1000,
+  "windowHeight": 700,
+  "fullScreen": false,
+  "updateInterval": 17, 
+  "windowCaption": "gameTest"
+}

@@ -3,9 +3,13 @@ require_relative 'dispatcher'
 require_relative 'hashConfig/controlHashes'
 
 class GameWindow < Gosu::Window
-    def initialize(width=800, height=600, fullscreen=false, update_interval=80.0)
+    def initialize(width=800, 
+                   height=600, 
+                   fullscreen=false, 
+                   update_interval=17,
+                   caption="strategicRuby")
         super
-        self.caption = 'strategicRuby'
+        self.caption = caption
         @isOngoing = true
         @dispatcher = Dispatcher.new
     end
